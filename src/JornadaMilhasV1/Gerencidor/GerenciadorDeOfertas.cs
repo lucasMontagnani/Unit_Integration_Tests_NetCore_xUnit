@@ -1,4 +1,5 @@
-﻿using JornadaMilhasV1.Modelos;
+﻿using JornadaMilhas.Dados;
+using JornadaMilhasV1.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace JornadaMilhasV1.Gerencidor;
 public class GerenciadorDeOfertas
 {
     private List<OfertaViagem> ofertaViagem = new List<OfertaViagem>();
+    OfertaViagemDAL ofertaViagemDAL = new OfertaViagemDAL(new JornadaMilhasContext());
 
     public GerenciadorDeOfertas(List<OfertaViagem> ofertaViagem)
     {
